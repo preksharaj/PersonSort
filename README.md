@@ -34,15 +34,15 @@ Complexity: O(N)-if the list is sorted, O(N*log(N))- if list is in random order.
 3. I have decoupled the sorting algorithms form the collection object. So this is an advantage when we want to change the sorting algorithms irrespective of the collection.
 
 4. 2 Approaches<br/>
-  Sorting.java
-  I have used a switch case to switch between then comparators based on the sort field and in each case check for the boolean   ascending. If its true then sort the list of People in the ascending order and if false then use the comparator.reversed()     to sort in the descending order.
+Sorting.java
+I have used a switch case to switch between then comparators based on the sort field and in each case check for the boolean   ascending. If its true then sort the list of People in the ascending order and if false then use the comparator.reversed()     to sort in the descending order.
 
-  AnotherSoritng.java
-  Since using a switch case leads to complexity:O(n) worst time as it might have to check every conditions before a match is     met, I have optimised this step and used a HashMap instead with the GET and PUT operartion complexities of O(1). 
-  In the map I have defined the key as the sort field and value as the respective soritng comparators.
-  Based on the sortfield a GET operation is done on the fieldComparatorMap and then the list of people will be sorted based on   that respective comparator.
-  Additonaly if the ascending is set to true the list is sorted in the ascending order and if set to false then 
-  comparator.reversed() is used to sort in the descending order.
+AnotherSoritng.java
+Since using a switch case leads to complexity:O(n) worst time as it might have to check every conditions before a match is     met, I have optimised this step and used a HashMap instead with the GET and PUT operartion complexities of O(1). 
+In the map I have defined the key as the sort field and value as the respective soritng comparators.
+Based on the sortfield a GET operation is done on the fieldComparatorMap and then the list of people will be sorted based on   that respective comparator.
+Additonaly if the ascending is set to true the list is sorted in the ascending order and if set to false then 
+comparator.reversed() is used to sort in the descending order.
 
 
 Additional Features
