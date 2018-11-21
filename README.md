@@ -1,6 +1,6 @@
 # PersonSort
 
-Problem Statement
+###Problem Statement
 We have a person class:
 class Person{ String ssn; Date dateOfBirth; String firstName; String lastName; Double heightIn; Double weightLb; }
 
@@ -10,7 +10,7 @@ Sample request: /people?sortField=dateOfBirth&ascending=false
 Please implement this method to sort the results:
 static List sort(Iterable people, String sortField, String ascending){ }
 
-Run Instructions
+###Run Instructions
 Clone the git repo and use any IDE to open the package.
 Run the Main.java as Java Application.
 
@@ -23,7 +23,7 @@ javac -d out src/*.java
 javac Main.java
 java Main.java
 
-Implementations and TradeOffs
+###Implementations and TradeOffs
 1. I have implemented 6 comparators one for each sort field.
 The sorting method used is the Java 8 comparator.
 TradeOff= Since the comparator is based on Merge sort algorithm, it gives the best complexity=O(N*log(N)) in sorting based on the sort field.
@@ -45,13 +45,13 @@ Additonaly if the ascending is set to true the list is sorted in the ascending o
 comparator.reversed() is used to sort in the descending order.
 
 
-Additional Features
+###Additional Features
 1. When comparing and sorting based on sortfields-firstName and lastName, I have considerd the charcaters to be case insensitive and hence It will sort them in alphabetical order ignoring the case.
 
 2. I have implmented buildPersonList which can be used to convert an iterable to a List.
 
 
-Testing
+###Testing
 PersonTest.java is the file that can run for testing the sorting approaches.
 I have defined functions to test the sorting based on all the sortfields and also in ascending and descending order.
 
