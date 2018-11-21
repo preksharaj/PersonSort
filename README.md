@@ -10,18 +10,16 @@ Sample request: /people?sortField=dateOfBirth&ascending=false
 Please implement this method to sort the results:
 static List sort(Iterable people, String sortField, String ascending){ }
 
-###Run Instructions
-Clone the git repo and use any IDE to open the package.
-Run the Main.java as Java Application.
+Run Instructions
+-----------
+**Using IDE <br />**
+-clone the git repo and Import the project in any IDE(eg Eclipse)<br />
+-Run the project(Main.java) with Run as-> Java Application.<br />
 
-PersonTest.java can be run to test all the sorting methods based on all the sort fields.
+**Command Prompt<br />**
+-javac Main.java<br />
+-java Main.java<br />
 
-OR
-
-javac -d out src/*.java
-
-javac Main.java
-java Main.java
 
 ###Implementations and TradeOffs
 1. I have implemented 6 comparators one for each sort field.
