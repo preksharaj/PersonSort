@@ -55,32 +55,3 @@ comparator.reversed() is used to sort in the descending order.
 PersonTest.java is the file that can run for testing the sorting approaches.
 I have defined functions to test the sorting based on all the sortfields and also in ascending and descending order.
 
-JUnit Test Case
--We can use Mockito test framework and develope JUnit Test case to test each function
-
-@Test
-    public void sortOnFirstName() throws Exception {
-    
-    final String expectedPattern = "MM/dd/yyyy";
-        final SimpleDateFormat formatter = new SimpleDateFormat(expectedPattern);
-
-        final Person p1 = new Person("1", formatter.parse("09/22/2009"), "Chris", "Brown", 5.3, 115.3);
-        final Person p2 = new Person("2", formatter.parse("05/15/2011"), "Jen", "Mathew", 5.5, 110.0);
-        final Person p3 = new Person("3", formatter.parse("05/08/2011"), "Becky", "smith", 5.7, 180.9);
-
-        final List<Person> personList = new ArrayList<>();
-        personList.add(p1);
-        personList.add(p2);
-        personList.add(p3);
-
-        List<Person> firstNameAscPersonList = AnotherSorting.sorting(personList, "firstName", "true");
-        assertTrue(firstNameAscPersonList.get(0).getFirstName().equals("Becky"));
-        assertTrue(firstNameAscPersonList.get(1).getFirstName().equals("Chris"));
-        assertTrue(firstNameAscPersonList.get(2).getFirstName().equals("Jen"));
-
-        List<Person> firstNameDescPersonList = AnotherSorting.sorting(personList, "firstName", "false");
-        assertTrue(firstNameDescPersonList.get(2).getFirstName().equals("Becky"));
-        assertTrue(firstNameDescPersonList.get(1).getFirstName().equals("Chris"));
-        assertTrue(firstNameDescPersonList.get(0).getFirstName().equals("Jen"));
-
-    }
