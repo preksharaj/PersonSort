@@ -33,7 +33,7 @@ Complexity: O(N)-if the list is sorted, O(N*log(N))- if list is in random order.
 
 3. I have decoupled the sorting algorithms form the collection object. So this is an advantage when we want to change the sorting algorithms irrespective of the collection.
 
-4. 2 Approaches
+4. 2 Approaches<br/>
   Sorting.java
   I have used a switch case to switch between then comparators based on the sort field and in each case check for the boolean   ascending. If its true then sort the list of People in the ascending order and if false then use the comparator.reversed()     to sort in the descending order.
 
